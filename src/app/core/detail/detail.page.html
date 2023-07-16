@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title mode="ios">{{recipe_name}}</ion-title>
+    <ion-buttons slot="end">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <div class="square-container">
+      <img [src]="imageUrl" alt="Image" class="square-image">
+    </div>
+    <br>
+    <ion-grid fixed>
+      <ion-row style="padding: 0 4%">
+        <ion-col size="12">
+          <ion-text color="">
+            <h4>Ingredients</h4>
+            <div *ngFor="let item of ingredient$" style="color:#242424">
+              <ion-checkbox mode="md" labelPlacement="end"><span>{{item}}</span></ion-checkbox><br>
+            </div>
+          </ion-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-text color="">
+            <h4>Instructions</h4>
+            <div *ngFor="let item of step$ let i = index">{{i+1}}.  {{item}}</div>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button mode="ios" expand="full" (click)="openToUpdate(item)">
+      <ion-icon slot="icon-only" name="create"></ion-icon>
+    </ion-button>
+    <ion-button mode="ios" expand="full" color="danger" (click)="deleteConfirm(recipe_id)">
+      <ion-icon slot="icon-only" name="trash"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+.bg-primary {
+    background: linear-gradient(#e6d9ad, white);
+  height: 100%;
+}
+
+ion-item.item-inner {
+  --border-style: none !important;
+}
+
+ion-item {
+  --border-radius: 2.5rem;
+//   margin-bottom: .5rem;
+//   --min-height: 55px
+}

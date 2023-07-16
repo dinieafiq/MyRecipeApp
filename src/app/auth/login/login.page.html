@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <div id="container" class="bg-primary">
+    <!-- <ion-content class="transparent"> -->
+    <form (ngSubmit)="login()" [formGroup]="credentials">
+      <ion-grid>
+        <ion-row color="primary" style="margin: 0 8%">
+          <ion-col size="12">
+            <div class="ion-text-center" style="margin-top: 20%">
+              <h1><span style="font-weight: 300;">Welcome</span> <br>
+                MyRecipe App</h1>
+            </div>
+            <br style="margin-bottom: 30px;">
+            <ion-row>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+                  <ion-input type="text" placeholder="USERNAME" formControlName="username" required></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col size="12">
+                <ion-item>
+                  <ion-input type="{{showPass ? 'password' : 'text' }}" placeholder="PASSWORD"
+                    formControlName="password" required>
+                  </ion-input>
+                  <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+                  <ion-icon slot="end" name="{{showPass ? 'eye-outline' : 'eye-off-outline' }}"
+                    (click)="hideShowPassword()"></ion-icon>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <div style="margin-top: 10%" class="ion-align-items-center">
+              <ion-button mode="ios" type="submit" expand="block" shape="round" color="secondary"
+                [disabled]="!credentials.valid">Login
+              </ion-button>
+
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+    <!-- </ion-content> -->
+  </div>
+</ion-content>

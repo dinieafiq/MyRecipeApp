@@ -1,0 +1,16 @@
+ion-button {
+  height: 90px;
+  //   width: 100px;
+
+  white-space: normal;
+}
+
+.bg-primary {
+  background: linear-gradient(#e6d9ad, white);
+  height: 100%;
+}
+
+ion-button {
+  --background: linear-gradient(#e6d9ad, white);
+  --border-radius: 8px;
+}

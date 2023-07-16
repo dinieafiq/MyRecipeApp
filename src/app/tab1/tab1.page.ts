@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { DbService } from 'src/app/shared/services/db.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(private dbService: DbService, private router: Router) { }
 
+  addNewRecipe() {
+    this.router.navigate(['/add']);
+  }
+
+  openRecipeList(){
+    this.router.navigate(['/menu']);
+  }
 }

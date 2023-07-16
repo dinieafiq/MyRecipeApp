@@ -1,0 +1,25 @@
+ion-item {
+  width: 100%;
+}
+
+.custom-select::part(icon) {
+  font-size: 24px;
+  /* Adjust the size of the icon as needed */
+  color: #000000;
+  /* Set the color of the icon */
+  margin-right: 8px;
+  /* Adjust the spacing between the icon and the text */
+}
+
+ion-toolbar.search {
+  --background: #ffffff;
+  margin: 3% 0;
+}
+
+ion-item ion-ripple-effect {
+  --ripple-color: rgba(0, 0, 0, 0.3);
+  /* Customize the ripple color */
+  --ripple-opacity: 0.3;
+  /* Customize the ripple opacity */
+  /* Add any other customizations as needed */
+}

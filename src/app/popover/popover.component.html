@@ -1,0 +1,8 @@
+<ion-list>
+  <ion-item *ngFor="let option of options">
+    <!-- <ion-label>{{ option }}</ion-label> -->
+    <ion-checkbox (ionChange)="onCheckboxChange(option, $event)">{{ option.replaceAll('_',' ') }}</ion-checkbox>
+  </ion-item>
+</ion-list>
+
+<ion-button expand="full" fill="clear" (click)="applyFilter()">Apply</ion-button>

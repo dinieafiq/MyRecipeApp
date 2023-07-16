@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipe>
+    <type>
+        <breakfast>
+            <recipe_id>1</recipe_id>
+            <name>Roti Bakar Kaya</name>
+            <image_path>https://2.bp.blogspot.com/_eh50Ag-nytA/S065der0MmI/AAAAAAAAA2o/KcggbY5MFvo/w1200-h630-p-k-no-nu/2352295165_c4d5e9746d.jpg</image_path>
+            <ingredients>Ingredient 1</ingredients>
+            <ingredients>Ingredient 2</ingredients>
+            <ingredients>Ingredient 3</ingredients>
+            <steps>Step 1</steps>
+            <steps>Step 2</steps>
+            <steps>Step 3</steps>
+            <steps>Step 4</steps>
+        </breakfast>
+        <breakfast>
+            <recipe_id>2</recipe_id>
+            <name>Pancake</name>
+            <image_path>https://img.buzzfeed.com/thumbnailer-prod-us-east-1/51a9c5b156c84977ae50004b5ef622b2/finalFB.jpg?resize=1200:*</image_path>
+            <ingredients>Ingredient 1</ingredients>
+            <ingredients>Ingredient 2</ingredients>
+            <ingredients>Ingredient 3</ingredients>
+            <steps>Step 1</steps>
+            <steps>Step 2</steps>
+            <steps>Step 3</steps>
+            <steps>Step 4</steps>
+        </breakfast>
+    </type>
+    <type>
+        <appetizers>
+            <recipe_id>3</recipe_id>
+            <name>Fresh Spring Rolls</name>
+            <image_path>https://tastesbetterfromscratch.com/wp-content/uploads/2013/03/Fresh-Spring-Rolls-15-400x400.jpg</image_path>
+            <ingredients>Ingredient 1</ingredients>
+            <ingredients>Ingredient 2</ingredients>
+            <ingredients>Ingredient 3</ingredients>
+            <steps>Step 1</steps>
+            <steps>Step 2</steps>
+            <steps>Step 3</steps>
+            <steps>Step 4</steps>
+        </appetizers>
+    </type>
+    <type>
+        <main_dish>
+            <recipe_id>4</recipe_id>
+            <name>Kampung Fried Rice</name>
+            <image_path>https://resepichenom.com/media/Nasi_Goreng_Kampung.jpg</image_path>
+            <ingredients>Ingredient 1</ingredients>
+            <ingredients>Ingredient 2</ingredients>
+            <ingredients>Ingredient 3</ingredients>
+            <steps>Step 1</steps>
+            <steps>Step 2</steps>
+            <steps>Step 3</steps>
+            <steps>Step 4</steps>
+        </main_dish>
+    </type>
+    <type>
+        <beverage>
+            <recipe_id>5</recipe_id>
+            <name>Strawberry Lemonade</name>
+            <image_path>https://tastesbetterfromscratch.com/wp-content/uploads/2019/03/Strawberry-Lemonade-8-500x500.jpg</image_path>
+            <ingredients>Ingredient 1</ingredients>
+            <ingredients>Ingredient 2</ingredients>
+            <ingredients>Ingredient 3</ingredients>
+            <steps>Step 1</steps>
+            <steps>Step 2</steps>
+            <steps>Step 3</steps>
+            <steps>Step 4</steps>
+        </beverage>
+    </type>
+</recipe>

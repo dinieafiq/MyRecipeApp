@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title mode="ios">Add New Recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="square-container" (click)="changeImage()">
+    <img [src]="imageUrl" alt="Image" class="square-image">
+  </div>
+  <br>
+  <form [formGroup]="recipeForm" (ngSubmit)="onSave()">
+    <ion-grid fixed>
+      <ion-row style="padding: 0 4%">
+        <ion-col size="12">
+          <ion-text color="">
+            <h4>Recipe Type</h4>
+            <ion-select placeholder="Select" formControlName="type" interface="action-sheet">
+              <ion-select-option value="breakfast">Breakfast</ion-select-option>
+              <ion-select-option value="main_dish">Main Dish</ion-select-option>
+              <ion-select-option value="beverage">Beverage</ion-select-option>
+              <ion-select-option value="appetizers">Appetizers</ion-select-option>
+            </ion-select>
+            <h4>Recipe Name</h4>
+            <ion-item>
+              <ion-input formControlName="name"></ion-input>
+            </ion-item>
+            <h4>Ingredients</h4>
+            <div formArrayName="ingredients">
+              <ion-item *ngFor="let control of getIngredientArray.controls; let i = index">
+                <ion-input placeholder="{{i+1}}." [formControlName]="i"></ion-input>
+                <ion-icon item-end color="danger" name="trash" (click)="removeIngFormControl(i)">
+                </ion-icon>
+              </ion-item>
+            </div>
+            <ion-button style="float: right;" (click)="addIngFormControl()" fill="clear">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+          </ion-text>
+        </ion-col>
+        <ion-col size="12">
+          <ion-text color="">
+            <h4>Instructions</h4>
+            <div formArrayName="steps">
+              <ion-item *ngFor="let control of getStepArray.controls; let i = index">
+                <ion-input placeholder="{{i+1}}." [formControlName]="i"></ion-input>
+                <ion-icon item-end color="danger" name="trash" (click)="removeStepFormControl(i)">
+                </ion-icon>
+              </ion-item>
+            </div>
+            <ion-button style="float: right;" (click)="addStepFormControl()" fill="clear">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button mode="ios" type="submit" expand="full" [disabled]="!recipeForm.valid">
+      Add Recipe
+    </ion-button>
+  </form>
+</ion-content>

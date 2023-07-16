@@ -24,3 +24,23 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+ul,
+ol {
+  padding-left: 1.2em;
+  list-style: decimal;
+}
+
+h4 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.custom-checkbox .checkbox-inner input:checked+.checkbox-icon::before {
+  text-decoration: line-through;
+}
+
+ion-content {
+//   --overflow: hidden;
+}
